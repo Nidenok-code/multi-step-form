@@ -1,0 +1,71 @@
+.contentsInfo {
+  flex: 1 0 0;
+  position: relative;
+  .content {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: 1s;
+    transform: translateX(-100%);
+    h4 {
+      margin-bottom: 11px;
+      font-weight: 700;
+      font-size: 32px;
+      color: #022959;
+    }
+    .content-text {
+      margin-bottom: 40px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 156%;
+      color: #9699aa;
+    }
+    &.isActive {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @import "./personalInfo";
+  @import "./chooserPlan";
+  @import "./addOns";
+  @import "./finesh";
+  .realyFinish {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 32px;
+      text-align: center;
+      color: #022959;
+      margin-bottom: 14px;
+    }
+    .realyFinishText {
+      margin-bottom: 14px;
+      border-radius: 10px;
+      padding: 5px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 156%;
+      text-align: center;
+      color: #ffffff;
+      background-color: #022959c4;
+    }
+    .restartBtn {
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 156%;
+      text-align: center;
+      color: #ffffff;
+      background-color: #022959c4;
+    }
+  }
+}

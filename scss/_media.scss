@@ -1,0 +1,195 @@
+@media (max-width: 768px) {
+  body {
+    .continer {
+      height: 100vh;
+      padding: 0;
+      border-radius: 0;
+      background: none;
+      flex-direction: column;
+      .steps {
+        position: relative;
+        height: auto;
+        max-width: 100%;
+        padding-bottom: 107px;
+        border-radius: 0;
+        background-size: cover;
+        background-position: 0 95%;
+        flex-direction: row;
+        justify-content: center;
+        z-index: -1;
+        .step {
+          .stepNum {
+            padding-left: 2px;
+          }
+          .stepInfo {
+            display: none;
+          }
+        }
+      }
+      .contents {
+        height: max-content;
+        position: relative;
+        max-width: 100%;
+        padding: 0;
+        overflow: auto;
+        top: -73px;
+        .contentsInfo {
+          margin: 0 16px;
+          margin-bottom: 80px;
+          .content {
+            padding: 32px 24px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 25px 40px -20px #00000018;
+            transition: 0.5s;
+            transform: translateX(0) scale(0);
+            &.isActive {
+              transform: translateX(0) scale(1);
+            }
+          }
+
+          .realyFinish {
+            height: auto;
+          }
+        }
+        .contentsBtns {
+          width: 100%;
+          padding: 16px;
+          background-color: #fff;
+          position: fixed;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  body {
+    .continer {
+      .contents {
+        .contentsInfo {
+          .content {
+            h4 {
+              margin-bottom: 9px;
+              font-size: 24px;
+            }
+            .content-text {
+              margin-bottom: 22px;
+            }
+          }
+          .personalInfo {
+            form {
+              gap: 16px;
+              .getInfo {
+                gap: 3px;
+                label {
+                  font-size: 12px;
+                }
+                input {
+                  border-radius: 4px;
+                  font-size: 15px;
+                }
+                span {
+                  font-weight: 500;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .chooserPlan {
+            form {
+              .plans {
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 24px;
+                .plan {
+                  padding: 10px 16px;
+                  display: flex;
+                  svg {
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+          .addOns {
+            form {
+              gap: 12px;
+              .addOns-item {
+                padding: 11px 16px;
+                border-radius: 8px;
+                .addOns-left {
+                  gap: 16px;
+                  .addOns-info {
+                    gap: 3px;
+                    span:first-child {
+                      font-size: 14px;
+                    }
+                    span:last-child {
+                      font-size: 12px;
+                      line-height: 100%;
+                    }
+                  }
+                }
+                .addOns-price {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .finish {
+            .calculation {
+              padding: 16px;
+              flex-direction: column;
+              gap: 12px;
+              .monthOrYear {
+                margin: 0;
+                .name {
+                  gap: 3px;
+                  span:first-child {
+                    font-size: 14px;
+                  }
+                }
+                .price {
+                  font-size: 14px;
+                }
+              }
+              .line {
+                margin: 0;
+              }
+              .addition {
+                margin: 0;
+              }
+            }
+            .allPrice {
+              padding: 24px 16px 0;
+              span:last-child {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .realyFinish {
+            padding: 79px 24px;
+            height: auto;
+            svg {
+              width: 56px;
+              margin-bottom: 24px;
+            }
+            h2 {
+              font-size: 24px;
+            }
+          }
+        }
+        .contentsBtns {
+          button {
+            font-size: 14px;
+          }
+          .btnNext {
+            padding: 12px 16px;
+          }
+        }
+      }
+    }
+  }
+}

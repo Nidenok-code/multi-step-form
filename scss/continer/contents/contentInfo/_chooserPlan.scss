@@ -1,0 +1,93 @@
+.chooserPlan {
+  form {
+    .plans {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 32px;
+      .plan {
+        flex: 1 0 0;
+        padding: 20px 16px 16px;
+        border: 1px solid #d6d9e6;
+        border-radius: 8px;
+        transition: 0.4s;
+        input {
+          visibility: hidden;
+        }
+        svg {
+          margin-bottom: 40px;
+        }
+        .planInfo {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          span:first-child {
+            font-weight: 500;
+            font-size: 16px;
+            color: #022959;
+          }
+          span:nth-child(2) {
+            font-weight: 400;
+            font-size: 14px;
+            color: #9699aa;
+          }
+          .discount {
+            display: none;
+            font-weight: 400;
+            font-size: 12px;
+            color: #022959;
+          }
+        }
+        &:hover {
+          border-color: #483eff;
+        }
+        &.isActive {
+          background-color: #f8f9ff;
+          border-color: #483eff;
+
+        }
+      }
+    }
+    .yearOrMonth {
+      padding: 13px 0;
+      border-radius: 8px;
+      background-color: #f8f9ff;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      label {
+        position: relative;
+        padding: 4px;
+        width: 38px;
+        height: 20px;
+        background-color: #022959;
+        border-radius: 10px;
+        input {
+          position: absolute;
+          visibility: hidden;
+          &:checked ~ span {
+            left: 22px;
+          }
+        }
+        span {
+          position: absolute;
+          left: 4px;
+          display: block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #fff;
+          transition: 0.4s;
+        }
+      }
+      button {
+        font-weight: 700;
+        font-size: 14px;
+        color: #9699aa;
+        &.isActive {
+          color: #022959;
+        }
+      }
+    }
+  }
+}

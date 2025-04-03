@@ -1,0 +1,856 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+label {
+  cursor: pointer;
+}
+
+input {
+  outline: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #eff5ff;
+}
+body .continer {
+  overflow: hidden;
+  height: 600px;
+  max-width: 940px;
+  padding: 16px;
+  padding-right: 0;
+  border-radius: 15px;
+  background-color: #fff;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0941176471);
+          box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0941176471);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body .continer .steps {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 100%;
+  width: 100%;
+  max-width: 274px;
+  padding: 40px 32px;
+  border-radius: 10px;
+  background-color: #483eff;
+  background-image: url(../img/steps-background.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  z-index: 1;
+}
+body .continer .steps .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+body .continer .steps .step .stepNum {
+  width: 33px;
+  aspect-ratio: 1;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.07em;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .continer .steps .step .isActive {
+  background-color: #bee2fd;
+  border-color: #bee2fd;
+  color: #022959;
+}
+body .continer .steps .step .stepInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+body .continer .steps .step .stepInfo span:first-child {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #abbcff;
+}
+body .continer .steps .step .stepInfo span:last-child {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #fff;
+}
+body .continer .contents {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px 0 16px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .continer .contents .contentsInfo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  position: relative;
+}
+body .continer .contents .contentsInfo .content {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+body .continer .contents .contentsInfo .content h4 {
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 32px;
+  color: #022959;
+}
+body .continer .contents .contentsInfo .content .content-text {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 156%;
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .content.isActive {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+body .continer .contents .contentsInfo .personalInfo form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #022959;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo input {
+  cursor: text;
+  padding: 12px 16px;
+  border: 1px solid #d6d9e6;
+  border-radius: 8px;
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  color: #022959;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo input::-webkit-input-placeholder {
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo input::-moz-placeholder {
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo input:-ms-input-placeholder {
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo input::-ms-input-placeholder {
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo input::placeholder {
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo input:focus {
+  border-color: #483eff;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo span {
+  display: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ee374a;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo.error {
+  position: relative;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo.error input {
+  border-color: #ee374a;
+}
+body .continer .contents .contentsInfo .personalInfo form .getInfo.error span {
+  display: inline;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  padding: 20px 16px 16px;
+  border: 1px solid #d6d9e6;
+  border-radius: 8px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan input {
+  visibility: hidden;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan svg {
+  margin-bottom: 40px;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan .planInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan .planInfo span:first-child {
+  font-weight: 500;
+  font-size: 16px;
+  color: #022959;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan .planInfo span:nth-child(2) {
+  font-weight: 400;
+  font-size: 14px;
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan .planInfo .discount {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  color: #022959;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan:hover {
+  border-color: #483eff;
+}
+body .continer .contents .contentsInfo .chooserPlan form .plans .plan.isActive {
+  background-color: #f8f9ff;
+  border-color: #483eff;
+}
+body .continer .contents .contentsInfo .chooserPlan form .yearOrMonth {
+  padding: 13px 0;
+  border-radius: 8px;
+  background-color: #f8f9ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+}
+body .continer .contents .contentsInfo .chooserPlan form .yearOrMonth label {
+  position: relative;
+  padding: 4px;
+  width: 38px;
+  height: 20px;
+  background-color: #022959;
+  border-radius: 10px;
+}
+body .continer .contents .contentsInfo .chooserPlan form .yearOrMonth label input {
+  position: absolute;
+  visibility: hidden;
+}
+body .continer .contents .contentsInfo .chooserPlan form .yearOrMonth label input:checked ~ span {
+  left: 22px;
+}
+body .continer .contents .contentsInfo .chooserPlan form .yearOrMonth label span {
+  position: absolute;
+  left: 4px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .continer .contents .contentsInfo .chooserPlan form .yearOrMonth button {
+  font-weight: 700;
+  font-size: 14px;
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .chooserPlan form .yearOrMonth button.isActive {
+  color: #022959;
+}
+body .continer .contents .contentsInfo .addOns form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item {
+  cursor: pointer;
+  padding: 17px 24px 19px;
+  border: 1px solid #d6d9e6;
+  border-radius: 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left label {
+  min-width: 20px;
+  min-height: 20px;
+  position: relative;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left label span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #483eff;
+  border-radius: 4px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left label span::after {
+  content: "";
+  width: 4px;
+  height: 8px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: translate(100%, -20%);
+      -ms-transform: translate(100%, -20%);
+          transform: translate(100%, -20%);
+  rotate: 45deg;
+  display: block;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left label input {
+  visibility: hidden;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left label input:checked ~ span {
+  background: #483eff;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left .addOns-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left .addOns-info span:first-child {
+  font-weight: 500;
+  font-size: 16px;
+  color: #022959;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left .addOns-info span:last-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-price {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #483eff;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item.isActive {
+  border-color: #483eff;
+  background: #f8f9ff;
+}
+body .continer .contents .contentsInfo .addOns form .addOns-item:hover {
+  border-color: #483eff;
+}
+body .continer .contents .contentsInfo .finish .calculation {
+  padding: 16px 24px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f8f9ff;
+  border-radius: 8px;
+}
+body .continer .contents .contentsInfo .finish .calculation .monthOrYear {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .continer .contents .contentsInfo .finish .calculation .monthOrYear .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+body .continer .contents .contentsInfo .finish .calculation .monthOrYear .name span:first-child {
+  font-weight: 500;
+  font-size: 16px;
+  color: #022959;
+}
+body .continer .contents .contentsInfo .finish .calculation .monthOrYear .name span:last-child {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-decoration: underline;
+  color: #9699aa;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .continer .contents .contentsInfo .finish .calculation .monthOrYear .name span:last-child:hover {
+  color: #483eff;
+}
+body .continer .contents .contentsInfo .finish .calculation .monthOrYear .price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  color: #022959;
+}
+body .continer .contents .contentsInfo .finish .calculation .line {
+  height: 1px;
+  background: #9699aa;
+  opacity: 20%;
+  margin-bottom: 16px;
+}
+body .continer .contents .contentsInfo .finish .calculation .addition {
+  margin-bottom: 16px;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .continer .contents .contentsInfo .finish .calculation .addition span:first-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .finish .calculation .addition span:last-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #022959;
+}
+body .continer .contents .contentsInfo .finish .allPrice {
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .continer .contents .contentsInfo .finish .allPrice span:first-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #9699aa;
+}
+body .continer .contents .contentsInfo .finish .allPrice span:last-child {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  color: #483eff;
+}
+body .continer .contents .contentsInfo .realyFinish {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .continer .contents .contentsInfo .realyFinish svg {
+  margin-bottom: 32px;
+}
+body .continer .contents .contentsInfo .realyFinish h2 {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: #022959;
+  margin-bottom: 14px;
+}
+body .continer .contents .contentsInfo .realyFinish .realyFinishText {
+  margin-bottom: 14px;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 156%;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(2, 41, 89, 0.768627451);
+}
+body .continer .contents .contentsInfo .realyFinish .restartBtn {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 156%;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(2, 41, 89, 0.768627451);
+}
+body .continer .contents .contentsBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .continer .contents .contentsBtns button {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .continer .contents .contentsBtns .btnBack {
+  display: inline;
+  opacity: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: #9699aa;
+}
+body .continer .contents .contentsBtns .btnBack.isActive {
+  visibility: hidden;
+  opacity: 0;
+}
+body .continer .contents .contentsBtns .btnBack:hover {
+  color: #022959;
+}
+body .continer .contents .contentsBtns .btnNext {
+  padding: 15px 25px;
+  border-radius: 8px;
+  background: #022959;
+  color: #fff;
+}
+body .continer .contents .contentsBtns .btnNext.isActive {
+  opacity: 0;
+  visibility: hidden;
+}
+body .continer .contents .contentsBtns .btnNext:hover {
+  background: #164a8a;
+}
+body .continer .contents .contentsBtns .btnNext.confirm {
+  background: #483eff;
+}
+body .continer .contents .contentsBtns .btnNext.confirm:hover {
+  background: #928cff;
+}
+
+@media (max-width: 768px) {
+  body .continer {
+    height: 100vh;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .continer .steps {
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    padding-bottom: 107px;
+    border-radius: 0;
+    background-size: cover;
+    background-position: 0 95%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: -1;
+  }
+  body .continer .steps .step .stepNum {
+    padding-left: 2px;
+  }
+  body .continer .steps .step .stepInfo {
+    display: none;
+  }
+  body .continer .contents {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    position: relative;
+    max-width: 100%;
+    padding: 0;
+    overflow: auto;
+    top: -73px;
+  }
+  body .continer .contents .contentsInfo {
+    margin: 0 16px;
+    margin-bottom: 80px;
+  }
+  body .continer .contents .contentsInfo .content {
+    padding: 32px 24px;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0941176471);
+            box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0941176471);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateX(0) scale(0);
+        -ms-transform: translateX(0) scale(0);
+            transform: translateX(0) scale(0);
+  }
+  body .continer .contents .contentsInfo .content.isActive {
+    -webkit-transform: translateX(0) scale(1);
+        -ms-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+  body .continer .contents .contentsInfo .realyFinish {
+    height: auto;
+  }
+  body .continer .contents .contentsBtns {
+    width: 100%;
+    padding: 16px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+  }
+}
+@media (max-width: 425px) {
+  body .continer .contents .contentsInfo .content h4 {
+    margin-bottom: 9px;
+    font-size: 24px;
+  }
+  body .continer .contents .contentsInfo .content .content-text {
+    margin-bottom: 22px;
+  }
+  body .continer .contents .contentsInfo .personalInfo form {
+    gap: 16px;
+  }
+  body .continer .contents .contentsInfo .personalInfo form .getInfo {
+    gap: 3px;
+  }
+  body .continer .contents .contentsInfo .personalInfo form .getInfo label {
+    font-size: 12px;
+  }
+  body .continer .contents .contentsInfo .personalInfo form .getInfo input {
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  body .continer .contents .contentsInfo .personalInfo form .getInfo span {
+    font-weight: 500;
+    font-size: 12px;
+  }
+  body .continer .contents .contentsInfo .chooserPlan form .plans {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  body .continer .contents .contentsInfo .chooserPlan form .plans .plan {
+    padding: 10px 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .continer .contents .contentsInfo .chooserPlan form .plans .plan svg {
+    margin: 0;
+  }
+  body .continer .contents .contentsInfo .addOns form {
+    gap: 12px;
+  }
+  body .continer .contents .contentsInfo .addOns form .addOns-item {
+    padding: 11px 16px;
+    border-radius: 8px;
+  }
+  body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left {
+    gap: 16px;
+  }
+  body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left .addOns-info {
+    gap: 3px;
+  }
+  body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left .addOns-info span:first-child {
+    font-size: 14px;
+  }
+  body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-left .addOns-info span:last-child {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  body .continer .contents .contentsInfo .addOns form .addOns-item .addOns-price {
+    font-size: 12px;
+  }
+  body .continer .contents .contentsInfo .finish .calculation {
+    padding: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+  }
+  body .continer .contents .contentsInfo .finish .calculation .monthOrYear {
+    margin: 0;
+  }
+  body .continer .contents .contentsInfo .finish .calculation .monthOrYear .name {
+    gap: 3px;
+  }
+  body .continer .contents .contentsInfo .finish .calculation .monthOrYear .name span:first-child {
+    font-size: 14px;
+  }
+  body .continer .contents .contentsInfo .finish .calculation .monthOrYear .price {
+    font-size: 14px;
+  }
+  body .continer .contents .contentsInfo .finish .calculation .line {
+    margin: 0;
+  }
+  body .continer .contents .contentsInfo .finish .calculation .addition {
+    margin: 0;
+  }
+  body .continer .contents .contentsInfo .finish .allPrice {
+    padding: 24px 16px 0;
+  }
+  body .continer .contents .contentsInfo .finish .allPrice span:last-child {
+    font-size: 16px;
+  }
+  body .continer .contents .contentsInfo .realyFinish {
+    padding: 79px 24px;
+    height: auto;
+  }
+  body .continer .contents .contentsInfo .realyFinish svg {
+    width: 56px;
+    margin-bottom: 24px;
+  }
+  body .continer .contents .contentsInfo .realyFinish h2 {
+    font-size: 24px;
+  }
+  body .continer .contents .contentsBtns button {
+    font-size: 14px;
+  }
+  body .continer .contents .contentsBtns .btnNext {
+    padding: 12px 16px;
+  }
+}

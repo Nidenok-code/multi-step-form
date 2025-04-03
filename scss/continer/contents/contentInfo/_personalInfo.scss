@@ -1,0 +1,52 @@
+.personalInfo {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .getInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      label {
+        font-weight: 400;
+        font-size: 14px;
+        color: #022959;
+      }
+      input {
+        cursor: text;
+        padding: 12px 16px;
+        border: 1px solid #d6d9e6;
+        border-radius: 8px;
+        background-color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        color: #022959;
+        transition: 0.4s;
+        &::placeholder {
+          color: #9699aa;
+        }
+        &:focus {
+          border-color: #483eff;
+        }
+      }
+      span {
+        display: none;
+        font-weight: 700;
+        font-size: 14px;
+        color: #ee374a;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      &.error {
+        position: relative;
+        input {
+          border-color: #ee374a;
+        }
+        span {
+          display: inline;
+        }
+      }
+    }
+  }
+}

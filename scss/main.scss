@@ -1,0 +1,7 @@
+@import "./general";
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #eff5ff;
+  @import "./continer/continer";
+}
+@import "./media";

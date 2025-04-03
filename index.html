@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="continer">
+      <ul class="steps">
+        <li class="step">
+          <div class="stepNum isActive">1</div>
+          <p class="stepInfo">
+            <span>1-QADAM</span>
+            <span>SIZNING MA’LUMOTINGIZ</span>
+          </p>
+        </li>
+        <li class="step">
+          <div class="stepNum">2</div>
+          <p class="stepInfo">
+            <span>2-QADAM</span>
+            <span>TARIFNI TANLASH</span>
+          </p>
+        </li>
+        <li class="step">
+          <div class="stepNum">3</div>
+          <p class="stepInfo">
+            <span>3-QADAM</span>
+            <span>QO‘SHIMCHALAR</span>
+          </p>
+        </li>
+
+        <li class="step">
+          <div class="stepNum">4</div>
+          <p class="stepInfo">
+            <span>4-QADAM</span>
+            <span>XULOSA</span>
+          </p>
+        </li>
+      </ul>
+      <div class="contents">
+        <div class="contentsInfo">
+          <div class="content personalInfo isActive">
+            <h4>Shaxsiy axborot</h4>
+            <p class="content-text">
+              Ismingiz, email manzilingiz va telefon raqamingizni kiriting.
+            </p>
+            <form id="personalInfoForm">
+              <div class="getInfo fullName">
+                <label for="name">Ism</label>
+                <input
+                  name="name"
+                  id="name"
+                  type="text"
+                  placeholder="e.g. Boboqulov Bobur"
+                />
+                <span></span>
+              </div>
+              <div class="getInfo email">
+                <label for="email">Email manzil</label>
+                <input
+                  name="email"
+                  id="email"
+                  type="text"
+                  placeholder="e.g. boboqulovbobur@gmail.com"
+                />
+                <span></span>
+              </div>
+              <div class="getInfo phoneNumber">
+                <label for="phoneNumber">Telefon raqam</label>
+                <input
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  type="text"
+                  maxlength="9"
+                  placeholder="e.g. 987654321"
+                />
+                <span></span>
+              </div>
+            </form>
+          </div>
+          <div class="content chooserPlan">
+            <h4>Tarif rejani tanlang</h4>
+            <p class="content-text">
+              Oylik yoki yillik hisob-kitob qilish imkoniyatiga egasiz.
+            </p>
+            <form id="chooserPlanForm">
+              <div class="plans">
+                <label class="plan isActive">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#FFAF7E" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M22.953 12.4916C23.2 13.9311 22.374 15.3391 20.9971 15.826V18.0051H18.9979V15.826C17.6209 15.3391 16.795 13.9311 17.0419 12.4916C17.2889 11.0522 18.537 10 19.9975 10C21.458 10 22.7061 11.0522 22.953 12.4916ZM18.9979 18.0051V24.0025H20.9971V18.0051H24.9954C25.5474 18.0051 25.9949 18.4526 25.9949 19.0046V29.0004C25.9949 29.5525 25.5474 30 24.9954 30H14.9996C14.4475 30 14 29.5525 14 29.0004V19.0046C14 18.4526 14.4475 18.0051 14.9996 18.0051H18.9979ZM18.9979 27.0013H16.9987V25.0021H18.9979V27.0013Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <input type="radio" name="name" value="Arcade" checked />
+                  <div class="planInfo">
+                    <span>Arcade</span><span>$9/mo</span>
+                    <span class="discount">2 oy bepul</span>
+                  </div>
+                </label>
+                <label class="plan">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#F9818E" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.9437 15H25.0567C27.7897 15 30 17.0294 30 19.8847C30 22.7419 27.7897 24.8214 25.0566 24.8214H14.9437C12.2117 24.8214 10 22.7419 10 19.8847C10 17.0294 12.2117 15 14.9437 15ZM17.2662 20.625C17.3919 20.625 17.5 20.5087 17.5 20.3883H17.5V19.3997C17.5 19.2792 17.3942 19.1964 17.2689 19.1964H15.7143V17.6445C15.7143 17.5187 15.598 17.4107 15.4776 17.4107H14.489C14.3685 17.4107 14.2857 17.5166 14.2857 17.6418V19.1964H12.7024C12.5856 19.1964 12.5 19.2921 12.5 19.4094V20.3659C12.5 20.4864 12.5907 20.625 12.717 20.625H14.2857V22.2083C14.2857 22.3251 14.3813 22.4107 14.4987 22.4107H15.4552C15.5757 22.4107 15.7143 22.32 15.7143 22.1937V20.625H17.2662ZM22.8467 20.7806C22.3674 20.7806 21.9783 20.3973 21.9783 19.9256C21.9783 19.4539 22.3674 19.0699 22.8467 19.0699C23.3281 19.0699 23.7171 19.4539 23.7171 19.9256C23.7171 20.3973 23.3281 20.7806 22.8467 20.7806ZM23.8778 21.7954C23.8778 22.2666 24.2669 22.6474 24.7462 22.6474C25.2276 22.6474 25.6166 22.2666 25.6166 21.7954C25.6166 21.3205 25.2275 20.9404 24.7462 20.9404C24.2669 20.9404 23.8778 21.3204 23.8778 21.7954ZM24.7462 18.9114C24.2669 18.9114 23.8778 18.5284 23.8778 18.0567C23.8778 17.5849 24.2669 17.2009 24.7462 17.2009C25.2275 17.2009 25.6166 17.5849 25.6166 18.0567C25.6166 18.5284 25.2276 18.9114 24.7462 18.9114ZM25.7777 19.9256C25.7777 20.3973 26.1667 20.7806 26.6456 20.7806C27.125 20.7806 27.514 20.3973 27.514 19.9256C27.514 19.4539 27.125 19.0699 26.6456 19.0699C26.1667 19.0699 25.7777 19.4539 25.7777 19.9256Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <input type="radio" name="name" value="Advanced" />
+                  <div class="planInfo">
+                    <span>Advanced</span><span>$12/mo</span
+                    ><span class="discount">2 oy bepul</span>
+                  </div>
+                </label>
+                <label class="plan">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#483EFF" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3336 13H26.6664C28.5073 13 29.9996 14.4923 29.9996 16.3332V23.5263C30.0204 24.9435 29.1714 26.229 27.8597 26.7662C26.6224 27.2684 25.2033 26.9495 24.2998 25.9662L21.4799 22.9996H18.5201L15.7002 25.9662C14.7957 26.9478 13.3778 27.2664 12.1403 26.7662C10.8286 26.229 9.97962 24.9435 10.0004 23.5263V16.3332C10.0004 14.4923 11.4927 13 13.3336 13ZM16.0001 18.9998H17.3334C17.7016 18.9998 18.0001 18.7013 18.0001 18.3331C18.0001 17.965 17.7016 17.6665 17.3334 17.6665H16.0001V16.3332C16.0001 15.965 15.7017 15.6666 15.3335 15.6666C14.9653 15.6666 14.6669 15.965 14.6669 16.3332V17.6665H13.3336C12.9654 17.6665 12.6669 17.965 12.6669 18.3331C12.6669 18.7013 12.9654 18.9998 13.3336 18.9998H14.6669V20.3331C14.6669 20.7012 14.9653 20.9997 15.3335 20.9997C15.7017 20.9997 16.0001 20.7012 16.0001 20.3331V18.9998ZM24.6665 20.9997C23.1938 20.9997 21.9999 19.8058 21.9999 18.3331C21.9999 16.8604 23.1938 15.6666 24.6665 15.6666C26.1392 15.6666 27.3331 16.8604 27.3331 18.3331C27.3331 19.0404 27.0521 19.7186 26.552 20.2187C26.052 20.7188 25.3737 20.9997 24.6665 20.9997ZM24.6665 19.6664C25.4028 19.6664 25.9998 19.0695 25.9998 18.3331C25.9998 17.5968 25.4028 16.9999 24.6665 16.9999C23.9301 16.9999 23.3332 17.5968 23.3332 18.3331C23.3332 19.0695 23.9301 19.6664 24.6665 19.6664Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <input type="radio" name="name" value="Pro" />
+                  <div class="planInfo">
+                    <span>Pro</span><span>$15/mo</span
+                    ><span class="discount">2 oy bepul</span>
+                  </div>
+                </label>
+              </div>
+              <div class="yearOrMonth">
+                <button class="isActive" type="button">Oylik</button>
+                <label>
+                  <input type="checkbox" name="term" />
+                  <span></span>
+                </label>
+                <button type="button">Yillik</button>
+              </div>
+            </form>
+          </div>
+          <div class="content addOns">
+            <h4>Qo‘shimchalarni tanlash</h4>
+            <p class="content-text">
+              Qo‘shimchalar o‘yin taassurotingizni yaxshilashga yordam beradi.
+            </p>
+            <form id="addOnsForm">
+              <div class="addOns-item">
+                <div class="addOns-left">
+                  <label>
+                    <input type="checkbox" name="OnlineService" />
+                    <span></span>
+                  </label>
+                  <p class="addOns-info">
+                    <span>Onlayn xizmat</span>
+                    <span>Multipleyer o‘yinlariga ruxsat</span>
+                  </p>
+                </div>
+                <div class="addOns-price">+$1/mo</div>
+              </div>
+              <div class="addOns-item">
+                <div class="addOns-left">
+                  <label>
+                    <input type="checkbox" name="LargerStorage" />
+                    <span></span>
+                  </label>
+                  <p class="addOns-info">
+                    <span>Katta xotira joyi</span>
+                    <span>Qo‘shimcha 1TB bulutda tejang</span>
+                  </p>
+                </div>
+                <div class="addOns-price">+$2/mo</div>
+              </div>
+              <div class="addOns-item">
+                <div class="addOns-left">
+                  <label>
+                    <input type="checkbox" name="CustomizableProfile" />
+                    <span></span>
+                  </label>
+                  <p class="addOns-info">
+                    <span>Sozlanadigan profil</span>
+                    <span>Profilingiz uchun maxsus mavzu</span>
+                  </p>
+                </div>
+                <div class="addOns-price">+$2/mo</div>
+              </div>
+            </form>
+          </div>
+          <div class="content finish">
+            <h4>Yakunlanmoqda</h4>
+            <p class="content-text">
+              Tasdiqlashdan oldin hammasi joyida ekanini tekshiring.
+            </p>
+            <div class="calculation">
+              <div class="monthOrYear">
+                <div class="name">
+                  <span></span>
+                  <span class="change">o‘zgartirish</span>
+                </div>
+                <div class="price"></div>
+              </div>
+              <div class="line"></div>
+              <div class="addition">
+                <span>Onlayn xizmat</span>
+                <span></span>
+              </div>
+              <div class="addition">
+                <span>Katta xotira joyi</span>
+                <span></span>
+              </div>
+              <div class="addition">
+                <span>Sozlanadigan profil</span>
+                <span></span>
+              </div>
+            </div>
+            <p class="allPrice">
+              <span>Jami (oylik)</span>
+              <span></span>
+            </p>
+          </div>
+          <div class="content realyFinish">
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="40" cy="40" r="40" fill="#F9818E" />
+              <path
+                d="M48.4643 79.1667C49.2318 79.0173 49.9948 78.8455 50.7523 78.6515C52.0371 78.2933 53.3033 77.8711 54.5461 77.3865C55.7914 76.9044 57.0119 76.3603 58.203 75.7562C59.3936 75.1495 60.5532 74.4835 61.6773 73.7609C62.7997 73.0395 63.8853 72.2626 64.9301 71.4329C65.9775 70.6013 66.9826 69.7177 67.9417 68.7854C68.8981 67.8555 69.8075 66.8783 70.6664 65.8575C71.5274 64.8358 72.3367 63.7715 73.0913 62.6688C73.8451 61.5676 74.5435 60.4294 75.1838 59.2584C75.8236 58.0862 76.4045 56.8826 76.9242 55.6524C77.4451 54.4219 77.9042 53.1662 78.2996 51.8898C78.6378 50.7727 78.9271 49.6413 79.1666 48.4989L55.3739 24.6977C51.1311 20.4532 45.5904 18.3333 40.0423 18.3333C34.4939 18.3333 28.9406 20.4529 24.6977 24.6977C16.2118 33.1867 16.2118 46.9026 24.6977 55.3915L48.4643 79.1667Z"
+                fill="#E96170"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M55.3136 24.6843C51.0784 20.4488 45.5416 18.3333 40.0032 18.3333C34.4648 18.3333 28.9215 20.4488 24.6862 24.6843C16.2156 33.1554 16.2156 46.8423 24.6862 55.3134C33.1568 63.7844 46.8431 63.7844 55.3136 55.3134C63.7842 46.8423 63.7842 33.1554 55.3136 24.6843ZM48.9956 33.6772C49.2455 33.4824 49.552 33.3612 49.8675 33.3323L49.8675 33.3323C49.9238 33.3294 49.9803 33.3294 50.0366 33.3323C51.4237 33.3521 52.1147 35.5287 50.9931 36.3451L37.6672 46.34C37.0328 46.8135 36.0542 46.7432 35.494 46.1839L28.831 39.5206C27.5563 38.2966 29.9626 35.8902 31.1865 37.165L36.8279 42.8067L48.9956 33.6772Z"
+                fill="white"
+              />
+            </svg>
+            <h2>Rahmat!</h2>
+            <p class="realyFinishText">
+              Obunangizni tasdiqlaganingiz uchun rahmat! Platformamizdan
+              foydalanishdan zavqlanasiz, deb umid qilamiz. Agar sizga yordam
+              kerak bo‘lsa, boboqulovbobur7777@gmail.com manziliga xat yuboring.
+            </p>
+            <button class="restartBtn">Yana o'rinish</button>
+          </div>
+        </div>
+        <div class="contentsBtns">
+          <button class="btnBack isActive">Orqaga</button>
+          <button class="btnNext">Keyingi qadam</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

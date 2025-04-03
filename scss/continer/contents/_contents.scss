@@ -1,0 +1,11 @@
+.contents {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px 0 16px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @import "./contentInfo/contentsInfo";
+  @import "./contentBtns";
+}

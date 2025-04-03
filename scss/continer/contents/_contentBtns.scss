@@ -1,0 +1,43 @@
+.contentsBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.4s;
+  }
+  .btnBack {
+    display: inline;
+    opacity: 1;
+    transition: 0.4s;
+    color: #9699aa;
+    &.isActive {
+      visibility: hidden;
+      opacity: 0;
+    }
+    &:hover {
+      color: #022959;
+    }
+  }
+  .btnNext {
+    padding: 15px 25px;
+    border-radius: 8px;
+    background: #022959;
+    color: #fff;
+    &.isActive {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      background: #164a8a;
+    }
+    &.confirm {
+      background: #483eff;
+      &:hover {
+        background: #928cff;
+      }
+    }
+  }
+}
